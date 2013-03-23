@@ -1,0 +1,23 @@
+div.navbar.navbar-static-top
+    div.navbar-inner
+        div.container
+            a.btn.btn-navbar(data-toggle='collapse',data-target='.nav-collapse')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.brand(href='/') NodeJSTR
+            div.nav-collapse.collapse
+                ul.nav.pull-right
+                    if (req.isAuthenticated())
+                        li.dropdown
+                            a.dropdown-toggle(data-toggle='dropdown',href='#') !{req.user.name}
+                            ul.dropdown-menu(role='menu',aria-labelledby='dLabel')
+                                li
+                                    a(href="/logout", title="Logout")
+                                        i.icon-user.icon-large
+                                        |  Logout
+                    else
+                        button.btn.btn-link
+                            a.text-success(href="/login", title='Login')
+                                i.icon-signin.icon-large
+                                |  Login

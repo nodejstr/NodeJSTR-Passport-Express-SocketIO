@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block main
+    div.center
+        img(src="../img/404.png")
+        h1 <500> d'oh <500>
+        p Something is wrong
+
+block content
+  #error-message-box
+    #error-stack-trace
+      - if(showStack)
+        pre
+          code!= error.stack

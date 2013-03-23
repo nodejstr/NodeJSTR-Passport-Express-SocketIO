@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block main
+    .row-fluid
+        .span12
+            .input-append
+                input#trackKeys.input-xxlarge(type="text",value="gdgistanbul,nodejstr,neo4j,hurriyet,istanbul",placeholder="some track keywords separated with comma")
+                button#startStop.btn.btn-danger
+                    | Start Stop
+        .span12
+            h1 Tweets
+            p#userId= req.user.twitter.id
+            h3.pull-right#count 0
+        .span12
+            #log.well

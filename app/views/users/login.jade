@@ -1,0 +1,16 @@
+extends auth
+block login
+    form.login(action="/login",name="login", method="post")
+        .control-group
+          .controls
+            input#email(type='text', name="username", placeholder='User Name')
+        .control-group
+          .controls
+            input#password(type='password', name="password", placeholder='Password')
+
+        button.btn.btn-primary(type='submit')
+            i.icon-signin.icon-large
+            |  Login
+        &nbsp;
+        | or&nbsp;
+        a.show-signup(href="/signup") sign up

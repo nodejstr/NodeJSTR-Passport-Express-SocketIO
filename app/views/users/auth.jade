@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block main
+    .modal
+        .modal-header.center
+            .row-fluid
+                .span6
+                    block login
+                .span6
+                    include social
+        .model-footer
+            if (typeof errors !== 'undefined' || typeof message !== 'undefined')
+                .fade.in.alert.alert-block.alert-error
+                    a.close(data-dismiss="alert", href="javascript:void(0)") x
+                    ul
+                        if (typeof errors !== 'undefined')
+                            each error in errors
+                                li= error.type
+                        if(typeof message !== 'undefined')
+                            li= message

@@ -1,0 +1,28 @@
+{
+    "name":"SocialTracker",
+    "version":"0.0.1",
+    "description":"",
+    "keywords":[
+        "twitter",
+        "streaming",
+        "public stream",
+        "social tracking"
+    ],
+    "dependencies":{
+        "express":"*",
+        "express-namespace":"*",
+        "jade":"*",
+        "mongoose":"*",
+        "connect-mongo":"*",
+        "connect-flash":"*",
+        "passport":"*",
+        "passport-local":"*",
+        "passport-twitter":"*",
+        "underscore":"*",
+        "gzippo":"*",
+        "async":"*",
+        "nodemon":"*",
+        "socket.io":"*",
+        "twitter-public-stream":"*"
+    }
+}

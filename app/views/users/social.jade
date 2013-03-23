@@ -1,0 +1,31 @@
+block social
+    if (!req.isAuthenticated() || (req.isAuthenticated() && !req.user.facebook))
+        a.zocial.facebook(href="/auth/facebook") Sign With Facebook
+        br
+    else
+        p Thanks adding your Facebook account
+        a.btn.btn-info(data-provider='facebook')
+            i.icon-facebook.icon-white
+            |  'Remove
+        br
+        br
+    if (!req.isAuthenticated() || (req.isAuthenticated() && !req.user.twitter))
+        a.zocial.twitter(href="/auth/twitter") Sign With Twitter
+        br
+    else
+        p Thanks adding your Twitter account
+        a.btn.btn-info(data-provider='twitter')
+            i.icon-twitter.icon-white
+            |  Remove
+        br
+        br
+    if (!req.isAuthenticated() || (req.isAuthenticated() && !req.user.google))
+        a.zocial.googleplus(href="/auth/google") Sign With Google
+        br
+    else
+        p Thanks adding your Google account
+        a.btn.btn-info(data-provider='google')
+            i.icon-google-plus.icon-white
+            |  Remove
+        br
+        br
